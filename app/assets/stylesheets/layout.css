@@ -1,0 +1,1436 @@
+﻿
+/* CSS Document */
+
+/* AK-Intranet, November
+   Erstellt		    am 12. November  2007
+   Letzte Aenderung am 23. September 2008
+*/
+
+/* Wichtige Farben
+
+	Elfenbein   		: #ffffff
+	weiß				: #ffffff
+	dunkelblau			: #00305e 
+	orange				: #ff8700 
+	dunkelrot			: #ac0000 
+	hellblau			: #99b4c6 
+	mittelblau			: #33698d 
+	fastdunkelblau		: #004471 
+	fasthellblau		: #668faa 
+	hellgrau			: #c0c0c0 
+	fasthellgrau		: #969696 
+	fastdunkelgrau		: #808080 
+	dunkelgrauschwarz	: #333333 
+ */
+ 
+ @import url("css/my_layout.css");
+ 
+ 
+	*{
+		padding: 0;
+		margin: 0;	
+		
+	}
+
+body
+	{ 
+		background: url(Image_png_jpg/AK_Background100808.png) top center  ;
+		/*background-repeat: repeat-x;*/
+		/*background-repeat: repeat;*/
+		text-align: center; /* Zentrierung des Layouts im IE 5 */
+		font-size: 85%; 
+		font-family: 'Trebuchet MS', MS Verdana, Arial, Helvetica, sans-serif;
+		line-height: 1.4em;
+	}
+	
+img, a img 
+	{
+		border: 0;
+	}
+	
+ul,li
+	{
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		position: relative;
+		display:inline;
+	}
+	
+	
+	
+h1,h2,h3,h4,h5,h6,ol,ul,li,dl,dt,dd,p,input,textarea,select
+	{
+		color: #000000;
+		font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+		text-align: left; /* Alle Elemente linksbündig */
+	}
+	
+h1 {
+	clear: both;
+	margin: 2em 0 1em 4em;
+	color: #000000;
+	/*background: #ac0000;???????*/
+	font-size: 2em;
+	line-height: 1.5em;
+	padding: 0.8em;
+	text-align: center;
+	position: relative;
+	float: left;
+	width: 16em;
+	display: inline; /*  Doubled float-margin bug Win IE, http://www.positioniseverything.net/explorer/doubled-margin.html */
+}
+
+h2 {
+	clear: both;
+	font-size: 1.5em;
+	margin: 1em 4em 0.1em 0;
+	color: #000000;
+	padding: 0.2em;
+	border-bottom: 0.05em solid #99b4c6;
+}
+
+h3 {
+	clear: both;
+	font-size: 1.5em;
+	margin: 1.8em 0 1em 1em;
+	color: #000000;
+	padding: 0.2em;
+	border-bottom: 0.05em solid #99b4c6;
+}
+
+.none 
+	{
+		display: none;
+	}
+
+.clear 
+	{
+		clear: both;
+	}
+
+.keine-anzeige 
+	{
+		display: none;
+	}
+
+.leftalign 
+	{
+		float: left;
+	}
+
+#inhalt .leftalign {
+float:left;
+margin: 5em 15em 5em 5em;
+}
+
+.rightalign 
+	{
+		float: right;
+	}
+	
+#inhalt .rightalign {
+float:left;
+margin: 5em 5em 5em 15em;
+}
+
+/* *** Float containers fix:
+ http://www.csscreator.com/attributes/containedfloat.php *** */ 
+.clearfix:after {
+ content: "."; 
+ display: block; 
+ height: 0; 
+ clear: both; 
+ visibility: hidden;
+ }
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+.clearfix{display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix{height: 1%;}
+.clearfix{display: block;}
+/* End hide from IE-mac */ 
+
+p {
+	font-size: 1.0em;
+	line-height: 1.0em;
+}
+
+a:link.skip, a:visited.skip, a:focus.skip, a: hover.skip, a:active.skip
+	{
+		color:#004471;
+		position: absolute;
+		left: -90em;
+		top: -90em;
+		width: 0em;
+		height: 0em;
+		overflow: hidden;
+		display: inline;
+	}
+/* Wrapbereich */
+#wrap
+	{
+		width: 85em;
+		margin: 0 auto;
+		/*text-align: left;
+		padding: 0;/*Buch*/
+		/*height: 100%;/*Buch*/
+		/*border:0.1em solid #00305e;*/
+	}
+/* Headerbereich */
+#header
+	{
+		float: left;
+		background: url(Image_png_jpg/Logo_Auto_040908.png) top left no-repeat;
+		width: 80em;
+		height: 10em;
+		text-align: right;
+		border-top: 0.1em solid #ffffff;
+		margin: 1em;
+		padding: 7em 2em 1em 0;
+	}
+	
+	h5
+	{
+	text-align:right;
+	padding: 4.5em 0 0 0;
+	}
+/* Navigation */
+#navigation
+	{
+		position: relative;
+		float: left;
+		width: 86em;
+		height: 4.7em;
+		border-bottom: 0.3em solid #ffffff;
+		border-top: 0.1em solid #ffffff;
+		font-weight: bold;
+		font-size: 0.8em;
+		line-height: 1.2em;
+		padding: 0.5em 0 0 0;  
+		margin-left: 15em;
+    top: 4px;
+    left: -50px;
+}
+
+#navigation ul 
+	{
+		position: relative;
+		width: 82em;
+		background: transparent; 
+		
+	}
+
+#navigation li 
+	{
+		/*background: url(Image_png_jpg/AK_Reiter100808.png) top left no-repeat;*/
+		padding: 0.8em 0 0.7em 0;
+		float: left;
+		height: 2.8em;
+        top: 0px;
+        left: 0px;
+        width:auto 
+}
+
+#navigation li a 
+	{
+		/*background: url(Image_png_jpg/AK_Reiter100808.png) top right no-repeat;*/
+		padding: 0.8em 3.9em 0.5em 0.1em;
+		/*color: #ffffff; /* Fix für IE 5.0 Win, verstecken vor IE Mac \*/
+		margin: -0.8em 0 -0.7em 0;
+		display: block; /* End hide */
+		width: 6em;
+		/*text-decoration: underline;*/
+		height: 2.6em;
+		
+		
+		/*display: block;
+		height: 1.6em;
+		width: 96%;
+		margin-bottom: -1em;
+		/*padding-top: 0.1em;*/
+		
+		
+		/*border-bottom: 0.2em solid #ffffff;*/
+		border:solid 0.1em #fffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        /*text-shadow: 1px 1px 0px #2F5670;*/
+        /*box-shadow: 1px 1px 1px #1E3C59;*/
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px; 
+        border-radius: 10px;  
+        /*border: 2px solid #3866A3;*/
+        background: #1E3C59;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59); 
+        text-align : center;		
+		/*behavior: url(./iecss3/ie-css3.htc);*/
+	}
+
+#navigation li a:link
+	{
+		
+		/*background: url(Image_png_jpg/AK_Reiter100808.png) 100% -0em no-repeat;*/
+		padding: 0.6em 2.8em 0.6em 1.3em;
+		color: #ffffff;
+		text-decoration: underline;
+		border:solid 0.1em #ffffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        /*text-shadow: 1px 1px 0px #2F5670;*/
+       /* box-shadow: 1px 1px 1px #1E3C59;*/
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px; 
+        -webkit-border-radius: 10px; 
+        border-radius: 10px;  
+        /*border: 2px solid #3866A3;*/
+        background: #1E3C59;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+       /*behavior: url(./iecss3/ie-css3.htc);*/
+	}
+
+#navigation li a:visited  
+	{
+		
+		/*background: url(Muster_etc/AK_Logo&PPT/AK_Reiter100808.png) 100% -13.8em no-repeat;*/
+		padding: 0.8em 3em 0.5em 1.1em;
+		color: #ffffff;
+		text-decoration: underline;
+	}
+
+#navigation li a:active
+	{
+		
+		/*background: url(Image_png_jpg/AK_Reiter100808.png) 100% -9.2em no-repeat;*/
+		padding: 0.8em 3em 0.5em 1.1em;
+		color: #ac0000;
+		text-decoration: underline;
+	}
+
+#navigation li a:hover 
+	{
+		/*background: url(Image_png_jpg/AK_Reiter100808.png) 100% -4.3em no-repeat;*/
+		padding: 0.6em 2.8em 0.6em 1.26em;
+		color: #00FF00;
+		text-decoration: underline;
+		
+			border:solid 0.1em #fffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        /*text-shadow: 1px 1px 0px #2F5670;*/
+        /*box-shadow: 1px 1px 1px #1E3C59;*/
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px;  
+        -webkit-border-radius: 10px; 
+        border-radius: 10px;  
+        /*border: 2px solid #3866A3;*/
+        background: #3E7294;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+	/*behavior: url(./iecss3/ie-css3.htc);*/
+	}
+	
+	#navigation li ul {
+        display:none;
+    position:absolute;
+    
+    
+   
+    }
+
+    #navigation li:hover ul{
+        display:block;
+       
+        height:auto; width:8em; 
+		
+		border:solid 0.1em #ffffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        /*text-shadow: 1px 1px 0px #2F5670;*/
+        /*box-shadow: 1px 1px 1px #1E3C59;*/
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px; 
+        -webkit-border-radius: 10px;  
+        border-radius: 10px;  
+        /*border: 2px solid #3866A3;*/
+        background: #1E3C59;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+     /*behavior: url(./iecss3/ie-css3.htc);*/
+   
+        
+    }
+
+    #navigation li ul li{
+        clear:both;
+    border-style:none;}
+
+body#startseite a#startnav , body#übersicht a#übersichtnav, body#management prozesse a#managementprozessenav, 
+body#kunden a#kundenorientierteprozessenav, body#unterstütz.- prozesse a#unterstützungsprozessenav, 
+body#kontakt a#kontaktnav, body#impressum a#impressumnav, body#suchen  finden a#suchennav 
+	{
+		background: url(Image_png_jpg/AK_Reiter100808.png) 100% 0em no-repeat;
+		padding: 0.8em 3em 0.9em 1.1em;
+		color: #ffffff;
+	}
+	
+	
+	
+	
+	
+/*STARTSEITE*/	
+		
+#linksbox
+{
+   padding: 0;
+   border-right:solid 0.1em #00305e ;
+   margin: 0;
+   margin-left: 7em;
+   width: 20%;
+   height:auto;
+   min-height:70em;
+   max-height:90em;
+   float: left;
+   display:inline;
+   position:relative; 
+   overflow: hidden;
+} 
+
+#rechtsbox
+{
+   padding: 0;
+   border-left:solid 0.1em #00305e;
+   margin-right: 5.5em;
+   width: 15%;
+   height:auto;
+   min-height:70em;
+   max-height:max;
+   float: right;
+   overflow: visible;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+     display:inline;
+} 
+
+#content
+{
+   padding: 0; 
+ 
+   width: 40%;
+   height:60em;/*
+   min-width :15em;*/
+   max-width:100em;/*
+   min-height:70em;
+   max-height:90em;*/
+   position:relative  ;
+   float:left   ;
+   overflow:visible;
+   margin-top: 0;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom:0 ; 
+     display:inline;
+    
+
+/*width: auto !important; /*ie7 */ 
+
+    /*
+   border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height:auto;
+    width:auto ;
+    min-height:70em;
+    max-height:90em;
+    float: left;
+    overflow:scroll;*/
+}
+
+#sucontent
+{
+   padding: 0;
+   border: none;
+   margin: 0;
+   width: 45%;
+   height:auto;
+   min-height:70em;
+   max-height:90em;
+   float: left;
+   overflow: hidden;
+}
+
+
+
+
+ul#pronav
+	{
+		width: 96%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		/*border-top: 0.2em solid #ffffff;*/
+		/*border-left: 0.2em solid #ffffff;*/
+		/*border-right: 0.2em solid #ffffff;*/
+	}
+
+ul#pronav li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+ul#pronav li a
+	{
+		display: block;
+		height: 3em;
+		width: 96%;
+		padding-top: 1.2em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		/*border-bottom: 0.2em solid #ffffff;*/
+		border:solid 0.1em #ffffff;
+		
+		border:solid 0.1em #ffffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        text-shadow: 1px 1px 0px #2F5670;
+        box-shadow: 1px 1px 1px #1E3C59;
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px;  
+        -webkit-border-radius: 10px;  
+        border-radius: 10px;  
+        /*border: 2px solid #3866A3;*/
+        background: #1E3C59;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+      
+	}
+
+ul#pronav2 li a
+	{
+		display: block;
+		height: 3em;
+		width: 96%;
+		padding-top: 1.2em;
+		background: #27508B;
+		text-decoration: none;
+		color: #eaeaea;
+		/*border-bottom: 0.2em solid #ffffff;*/
+		border:solid 0.1em #ffffff;
+		
+		border:solid 0.1em #ffffff;
+		
+		    font-family: arial;
+        color: #14396A !important;
+
+        text-shadow: 1px 1px 0px #7CACDE;
+        box-shadow: 1px 1px 1px #BEE2F9;
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px; 
+        -webkit-border-radius: 10px; 
+        border-radius: 10px;  
+        /*border: 2px solid #3866A3;*/
+        background: #468CCF;
+        background: linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+	}
+
+
+ul#pronav li a:hover
+	{
+		background-color: #33698d;
+	} 
+
+
+
+ul#supronav1
+	{
+		width: 96%;
+		margin: 1em 1em 0;
+		padding: 0;
+		float:left;
+		list-style: none;
+		text-align: left;
+		/*border-top: 0.2em solid #ffffff;*/
+		/*border-left: 0.2em solid #ffffff;*/
+		/*border-right: 0.2em solid #ffffff;*/
+	}
+
+ul#supronav1 li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+ul#supronav1 li a
+	{
+		display: block;
+		height: 1.2em;
+		width: 48%;
+		padding-top: 0em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		/*border-bottom: 0.2em solid #ffffff;*/
+		border:solid 0.1em #ffffff;
+	}
+
+ul#supronav1 li a:hover
+	{
+		background-color: #33698d;
+	} 
+
+
+
+ul#supronav2
+	{
+		width: 96%;
+		margin: -141.4em 0 0 20em;
+		padding: 0;
+		float:right;
+		list-style: none;
+		text-align: left;
+		/*border-top: 0.2em solid #ffffff;*/
+		/*border-left: 0.2em solid #ffffff;*/
+		/*border-right: 0.2em solid #ffffff;*/
+	}
+
+ul#supronav2 li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+ul#supronav2 li a
+	{
+		display: block;
+		height: 1.2em;
+		width: 48%;
+		padding-top: 0em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		/*border-bottom: 0.2em solid #ffffff;*/
+		border:solid 0.1em #ffffff;
+	}
+
+ul#supronav2 li a:hover
+	{
+		background-color: #33698d;
+	} 
+
+
+
+
+
+ul#organav
+	{
+		width: 96%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		/*border-top: 0.2em solid #ffffff;*/
+		/*border-left: 0.2em solid #ffffff;*/
+		/*border-right: 0.2em solid #ffffff;*/
+	}
+
+ul#organav li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+
+ul#organav li a
+	{
+	     
+		display: block;
+		height: 1.6em;
+		width: 96%;
+		margin-bottom: -1em;
+		/*padding-top: 0.1em;*/
+		
+		
+		/*border-bottom: 0.2em solid #ffffff;*/
+		border:solid 0.1em #ffffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        text-shadow: 1px 1px 0px #2F5670;
+        box-shadow: 1px 1px 1px #1E3C59;
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px;  
+        -webkit-border-radius: 10px; 
+        border-radius: 10px; 
+        /*border: 2px solid #3866A3;*/
+        background: #1E3C59;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+
+	}
+
+ul#organav li a:hover
+	{
+	    
+		display: block;
+		height: 1.6em;
+		width: 96%;
+		margin-bottom: -1em;
+		/*padding-top: 0.1em;*/
+		
+		
+		/*border-bottom: 0.2em solid #ffffff;*/
+		border:solid 0.1em #ffffff;
+		
+		    font-family: arial;
+        color: #14396A !important;
+
+        text-shadow: 1px 1px 0px #7CACDE;
+        box-shadow: 1px 1px 1px #BEE2F9;
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px; 
+        -webkit-border-radius: 10px; 
+        border-radius: 10px;  
+        /*border: 2px solid #3866A3;*/
+        background: #468CCF;
+        background: linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+
+	} 
+#organav li ul {
+        display:none;
+    position:relative ;    
+   
+    }
+
+    #organav li:hover ul
+    {
+         
+        display:table ;
+       
+        height:auto; width:8em; 
+		
+		border:solid 0.1em #ffffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        text-shadow: 1px 1px 0px #2F5670;
+        box-shadow: 1px 1px 1px #1E3C59;
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px; 
+        -webkit-border-radius: 10px; 
+        border-radius: 10px; 
+        /*border: 2px solid #3866A3;*/
+        background: #1E3C59;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+        
+   
+        
+    }
+
+    #organav li ul li{
+        clear:both;
+    border-style:none;}
+
+
+/**/
+#prozesscontent
+	{  
+		padding: 0;
+   		border: none;
+   		margin: 0;
+		/*margin-left:1em;*/
+		float: left;
+		height: 50em;
+		width: 57%;
+		overflow:hidden;
+		display:inline; 
+ 		position: relative;
+		background: url(Image_png_jpg/Kopie%20von%20hintergrundinandout.png)   center right no-repeat;
+	}
+	
+	
+#aaprominav1
+	{
+		width: 3%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		bottom: -5em;
+	}
+
+#aaprominav1 ul
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
+#aaprominav1 li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
+#aaprominav1 li a
+	{
+		display: block;
+		height: 1em;
+		width: 16em;
+		padding-top: 0.1em;
+		padding-bottom: 0.4em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		border: solid 0.1em #ffffff;
+		margin-bottom:0.2em;
+		margin-left: -31.4em;
+	}
+
+#aaprominav1 li a:hover
+	{
+		background-color: #33698d;
+	} 
+	
+#aaprominav2
+	{
+		width: 3%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		bottom: -15.7em;
+	}
+
+#aaprominav2 ul
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
+#aaprominav2 li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+		bottom: 9em;
+	}
+	
+#aaprominav2 li a
+	{
+		display: block;
+		height: 1em;
+		width: 12.8em;
+		padding-top: 0.1em;
+		padding-bottom: 0.4em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		border: solid 0.1em #ffffff;
+		margin-bottom:-3.8em;
+		margin-left: 4.9em;
+	}
+
+#aaprominav2 li a:hover
+	{
+		background-color: #33698d;
+	} 
+
+#aaprominav3
+	{
+		width: 3%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		bottom: -25.4em;
+	}
+
+#aaprominav3 ul
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
+#aaprominav3 li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+		bottom: 24em;
+	}
+	
+#aaprominav3 li a
+	{
+		display: block;
+		height: 1em;
+		width: 16em;
+		padding-top: 0.1em;
+		padding-bottom: 0.4em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		border: solid 0.1em #ffffff;
+		margin-bottom: 0.2em;
+		margin-left: 41em;
+	}
+
+#aaprominav3 li a:hover
+	{
+		background-color: #33698d;
+	} 
+
+
+
+
+
+/*Herstellung*/
+#maincol1
+	{  
+		padding: 0;
+   		border: none;
+   		margin: 0;
+		margin-left:1em; 
+ 		width:35%;
+		height: 50em;
+		float: left;
+		overflow:hidden;
+		display:inline; 
+ 		position: relative;
+		background: url(Image_png_jpg/hintergrundinandout.png) center left no-repeat;
+ 	}
+
+#prominav1
+	{
+		width: 3%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		bottom: -9em;
+	}
+
+#prominav1 ul
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
+#prominav1 li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
+#prominav1 li a
+	{
+		display: block;
+		height: 2.5em;
+		width: 9em;
+		padding-top: 0.8em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		border: solid 0.1em #ffffff;
+		margin-bottom:0.5em;
+		margin-left: -25em;
+		
+	}
+
+#prominav1 li a:hover
+	{
+		background-color: #33698d;
+	} 
+	
+#prominav2
+	{
+		width: 3%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		bottom: -8em;
+	}
+
+#prominav2 ul
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
+#prominav2 li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+		bottom: 9em;
+	}
+	
+#prominav2 li a
+	{
+		display: block;
+		height: 1em;
+		width: 8.8em;
+		padding-top: 0.1em;
+		padding-bottom: 0.4em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		border: solid 0.1em #ffffff;
+		margin-bottom:-3.8em;
+		margin-left: -0.6em;
+	}
+
+#prominav2 li a:hover
+	{
+		background-color: #33698d;
+	} 
+
+#prominav3
+	{
+		width: 3%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		bottom: -17.9em;
+	}
+
+#prominav3 ul
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+	}
+	
+#prominav3 li
+	{
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		font-size: 0.8em;
+		bottom: 24em;
+	}
+	
+#prominav3 li a
+	{
+		display: block;
+		height: 2.5em;
+		width: 9em;
+		padding-top: 0.8em;
+		background: #00305e;
+		text-decoration: none;
+		color: #eaeaea;
+		border: solid 0.1em #ffffff;
+		margin-bottom: 0.5em;
+		margin-left: 23em;
+	}
+
+#prominav3 li a:hover
+	{
+		background-color: #33698d;
+	} 
+
+
+/*ÜBERSICHT*/
+#maincol2
+	{  
+ 		   padding: 0;
+   		   border: none;
+   		   margin: 0;
+		   margin-left:2em;
+   		   width: 57%;
+   		   height: 50em;
+   		   float: left;
+   		   overflow: hidden;
+		   background-image: url(Image_png_jpg/Prozessbersicht.png);
+		   background-repeat:no-repeat;
+		   background-position: left bottom;
+ 		   display:inline; 
+ 		   position: relative;
+ 	}
+	
+#ubsinav1
+	{
+		bottom: -10em;
+		position: relative;
+		float: left;
+		margin-left: -20em;
+		width: 65em;
+		height: 8.6em;
+		font-weight: bold;
+		font-size: 0.8em;
+		overflow:hidden;
+	}
+	
+#ubsinav1 ul 
+	{
+		position: absolute;
+		width: 37em;
+		background: transparent;
+		overflow:hidden;
+	}
+	
+#ubsinav1 li 
+	{
+		background: url(Image_png_jpg/OrdnerSymbol.png) top left no-repeat;
+		padding: 0 0 0.2em 0.3em;
+		float: left;
+		overflow:hidden;
+	}
+	
+#ubsinav1 li a 
+	{
+		/*background: url(Image_png_jpg/OrdnerSymbol.png) top right no-repeat;/*ggf. einsetzen an alle drei navis denken*/
+		padding: 1.2em 0.2em 0.2em 0.1em;
+		color: #ff8700; /* Fix für IE 5.0 Win, verstecken vor IE Mac */
+		/*margin: -1.2em 0.4em 0 -0.6em;*/
+		display: block; /* End hide */
+		width: 5.7em;
+		height:8.6em;
+		overflow:hidden;
+	}
+
+#ubsinav1 li a:hover 
+	{
+		background: url(Image_png_jpg/OrdnerSymbol.png) 100% -8.9em no-repeat;
+		padding: 1.1em 0.1em 0.2em 0.3em;
+		margin: 0.1em 0.1em 0.1em -0.7em;
+		color: #00FF00;
+		text-decoration: underline;
+		overflow:hidden;
+	}
+
+#ubsinav2
+	{
+		bottom: -17em;
+		position: relative;
+		float: left;
+		margin-left: -33em;
+		width: 80em;
+		height: 7.6em;
+		font-weight: bold;
+		font-size: 0.8em;
+		overflow: visible;
+	}
+	
+#ubsinav2 ul 
+	{
+		position: absolute;
+		width: 45em;
+		background: transparent;
+		overflow:hidden;
+	}
+	
+#ubsinav2 li 
+	{
+		background: url(Image_png_jpg/OrdnerSymbol.png) top left no-repeat;
+		padding: 0 0 0.2em 0.3em;
+		float: left;
+		overflow:hidden;
+	}
+	
+#ubsinav2 li a 
+	{
+		/*background: url(Image_png_jpg/OrdnerSymbol.png) top right no-repeat;/*ggf. einsetzen an alle drei navis denken*/
+		padding: 1.2em 0.2em 0.2em 0.1em;
+		color: #ff8700; /* Fix für IE 5.0 Win, verstecken vor IE Mac */
+		/*margin: -1.2em 0.4em 0 -0.6em;*/
+		display: block; /* End hide */
+		width: 5.7em;
+		height:7.1em;
+		overflow:hidden;
+	}
+
+#ubsinav2 li a:hover 
+	{
+		background: url(Image_png_jpg/OrdnerSymbol.png) 100% -8.9em no-repeat;
+		padding: 1.1em 0.1em 0.2em 0.3em;
+		margin: 0.1em 0.1em 0.1em -0.7em;
+		color: #00FF00;
+		text-decoration: underline;
+		overflow:hidden;
+	}
+
+#ubsinav3
+	{
+		bottom: -24em;
+		position: relative;
+		float: left;
+		margin-left: -7em;
+		width: 52em;
+		height: 8.6em;
+		font-weight: bold;
+		font-size: 0.8em;
+		overflow:hidden;
+	}
+	
+#ubsinav3 ul 
+	{
+		position: absolute;
+		width: 37em;
+		background: transparent;
+		overflow:hidden;
+	}
+	
+#ubsinav3 li 
+	{
+		background: url(Image_png_jpg/OrdnerSymbol.png) top left no-repeat;
+		padding: 0 0 0.2em 0.3em;
+		float: left;
+		overflow:hidden;
+	}
+	
+#ubsinav3 li a 
+	{
+		/*background: url(Image_png_jpg/OrdnerSymbol.png) top right no-repeat;/*ggf. einsetzen an alle drei navis denken*/
+		padding: 1.2em 0.2em 0.2em 0.1em;
+		color: #ff8700; /* Fix für IE 5.0 Win, verstecken vor IE Mac */
+		/*margin: -1.2em 0.4em 0 -0.6em;*/
+		display: block; /* End hide */
+		width: 5.7em;
+		height:8.6em;
+		overflow:hidden;
+	}
+
+#ubsinav3 li a:hover 
+	{
+		background: url(Image_png_jpg/OrdnerSymbol.png) 100% -8.9em no-repeat;
+		padding: 1.1em 0.1em 0.2em 0.3em;
+		margin: 0.1em 0.1em 0.1em -0.7em;
+		color: #00FF00;
+		text-decoration: underline;
+		overflow:hidden;
+	}
+
+
+#footer
+	{
+		float: left;
+		width: 71em;
+		color:#ac0000;
+		height: 8em;
+		margin-left: 4.5em;
+		/*border-top: 0.1em solid #33698d;*/
+		clear:both;
+	}
+
+#footer p
+	{
+		color:#ac0000;
+		padding: 1em;
+		font-size: 1em;
+		float: left;
+	}
+
+h1, h2, h3, h4, h5, h6
+	{
+		margin: 0.1em;
+		color: #000000;
+	}
+
+p
+	{
+		margin: 1.5em 2em;
+	}
+	
+	#horizontalmenu ul {
+    padding:1; margin:1; list-style:none;
+    }
+
+    #horizontalmenu li 
+    {
+         
+    float:left; position:relative; padding-right:100; display:block;
+    border:4px solid #2F5670; 
+    border-style:inset;
+    		border:solid 0.1em #ffffff;
+		
+		border:solid 0.1em #ffffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        text-shadow: 1px 1px 0px #2F5670;
+        box-shadow: 1px 1px 1px #1E3C59;
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px;  
+        -webkit-border-radius: 10px; 
+        border-radius: 10px; 
+        /*border: 2px solid #3866A3;*/
+        background: #1E3C59;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+    }
+
+    #horizontalmenu li ul {
+        display:none;
+    position:absolute;
+    }
+
+    #horizontalmenu li:hover ul
+    {
+         
+        display:block;
+        background:red;
+    height:auto; width:8em; 
+    		border:solid 0.1em #ffffff;
+		
+		border:solid 0.1em #ffffff;
+		
+		font-family: arial;
+        color: #ffffff !important;
+
+        text-shadow: 1px 1px 0px #2F5670;
+        box-shadow: 1px 1px 1px #1E3C59;
+        /*padding: 10px 25px;*/
+        -moz-border-radius: 10px; 
+        -webkit-border-radius: 10px;  
+        border-radius: 10px; 
+        /*border: 2px solid #3866A3;*/
+        background: #1E3C59;
+        background: linear-gradient(top,  #2F5670,  #1E3C59);
+        background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+        background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+        background: -moz-linear-gradient(top,  ##2F5670,  #1E3C59);
+    }
+
+    #horizontalmenu li ul li{
+        clear:both;
+    border-style:none;}
+    
+   .btnMenux
+	    {
+		    display: block;
+			height: 1.6em;
+		    width: 96%;
+		    /*padding-top: 0.1em;*/
+		   
+		 
+		
+		    /*border-bottom: 0.2em solid #ffffff;*/
+		    border:solid 0.1em #ffffff;
+		
+		    font-family: arial;
+            color: #ffffff !important;
+
+            text-shadow: 1px 1px 0px #2F5670;
+            box-shadow: 1px 1px 1px #1E3C59;
+            /*padding: 10px 25px;*/
+            -moz-border-radius: 10px; 
+            -webkit-border-radius: 10px; 
+            border-radius: 10px; 
+            /*border: 2px solid #3866A3;*/
+            background: #1E3C59;
+            background: linear-gradient(top,  #2F5670,  #1E3C59);
+            background: -ms-linear-gradient(top,  ##2F5670,  #1E3C59);
+            background: -webkit-gradient(linear, left top, left bottom, from(#2F5670), to(#1E3C59));
+            background: #1E3C59;
+            text-align:center
+}
+.contenido
+{
+   border-style: none;
+    border-color: inherit;
+    border-width: medium;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height:auto;
+    min-height:70em;
+    max-height:90em;
+    float: left;
+    overflow:scroll ;
+}
+.buttonBox
+{
+	border: 1px solid gray;
+	font: bold 11px Verdana;
+	color:white;
+		background-color:#23445C;
+	margin-left: 29px;
+	text-align:center;
+}
+
+#SiteMapC
+	{
+		position: relative;
+		float: left;
+		width: 86em;
+		height: 2em;
+		border-bottom: 0.3em solid #ffffff;
+		/*border-top: 0.1em solid #ffffff;*/
+		font-weight: bold;
+		font-size: 0.8em;
+		line-height: 1.2em;
+		padding: 0.5em 0 0 0;  
+		margin-left: 15em;
+    top: 4px;
+    left: -50px;
+    	text-align:left ;
+}
+.tableSimple{}
+.tableSimple tbody tr:hover td { background-color:transparent ; }
+.tableSimple tbody th { border-bottom: 0px;}
+.tableSimple  tbody td { border-bottom: 0px ; }
+
+ 
